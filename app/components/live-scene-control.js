@@ -113,7 +113,7 @@ export default Component.extend(AuthenticatedController, {
           
           let newLoc = this.newLocation;
           if (!newLoc) {
-              this.flashMessages.danger("You haven't selected a location.");
+              this.flashMessages.danger("You haven't selected a prompt.");
               return;
           }
           this.set('selectLocation', false);

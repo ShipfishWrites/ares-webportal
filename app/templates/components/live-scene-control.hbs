@@ -187,7 +187,7 @@
              
              <DropdownMenu @id="playMenu" @title="Play"  @dropup={{true}} class="scene-menu">
                {{#if this.scene.can_edit}}
-                   <li><a href="#" {{action (mut this.selectLocation) true}} class="dropdown-item">Change Location</a></li>
+                   <li><a href="#" {{action (mut this.selectLocation) true}} class="dropdown-item">Change Prompt</a></li>
                    <li><a href="#" {{action (mut this.showInvitation) true}} class="dropdown-item">Invite Character</a></li>
                    <li><a href="#" {{action (mut this.managePoseOrder) true}} class="dropdown-item">Manage Pose Order</a></li>
                {{/if}}
@@ -296,8 +296,8 @@
         You're about to mark this scene for deletion. If there are poses, other participants will have a chance to download, share, or restart the scene before it is permanently deleted.  Are you sure?
     </BsModalSimple>
 
-    <BsModalSimple @title="Change the Scene Location" @closeTitle="Cancel" @submitTitle="Select" @size={{null}} @fade={{true}} @open={{this.selectLocation}} @onSubmit={{action "changeLocation"}} @onHide={{action (mut this.selectLocation) false}}>
-        <p>Select a location from the list or type one into the bottom box.</p>
+    <BsModalSimple @title="Change the Scene Prompt" @closeTitle="Cancel" @submitTitle="Select" @size={{null}} @fade={{true}} @open={{this.selectLocation}} @onSubmit={{action "changeLocation"}} @onHide={{action (mut this.selectLocation) false}}>
+        <p>Select a prompt from the list or type one into the bottom box.</p>
         <p>
           <PowerSelect @selected={{this.newLocation}} @options={{this.locations}} @onChange={{action "locationSelected"}} as |location|>
         {{location}}

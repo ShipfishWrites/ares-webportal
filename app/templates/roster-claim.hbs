@@ -1,6 +1,6 @@
-{{page-title "Claim Roster Character"}}
+{{page-title "Claim Egg"}}
 
-<h1>Claim Roster Character</h1>
+<h1>Claim Egg</h1>
   
 <div class="row profile-wrap">
     
@@ -30,8 +30,6 @@
           <span class="badge bg-info">Previously Played</span>
           {{/if}}
         </p>
-    
-        <p>Any questions about this character, contact {{this.model.roster.contact}}.</p>
         
       </div>
     </div>
@@ -56,7 +54,7 @@
 <div class="action-buttons">
   {{#if this.model.password}}
   <div class="alert alert-success">
-    <p>Roster character claimed!  You can now log into that character with the password: {{this.model.password}}</p>
+    <p>Egg claimed!  You can now log into this character with the password: {{this.model.password}}</p>
     <p>Please write this password down before you leave this page, or you will have to contact staff to reset it.</p>
   </div>
   {{else}}
@@ -69,10 +67,10 @@
 
 
 <BsModalSimple @title="Confirm Claim" @closeTitle="Cancel" @submitTitle="Confirm" @size={{null}} @fade={{true}} @open={{this.confirmClaim}} @onSubmit={{action "claimRoster"}} @onHide={{action (mut this.confirmClaim) false}}>
-    You're about to claim the character {{this.confirmClaim.name}} from the roster. Are you sure?
+    You're about to claim the egg {{this.confirmClaim.name}} from the roster. Are you sure?
   </BsModalSimple>
   
-<p><LinkTo @route="roster"><i class="fa fa-long-arrow-alt-left" aria-hidden="true"></i> Back to Roster</LinkTo></p>
+<p><LinkTo @route="roster"><i class="fa fa-long-arrow-alt-left" aria-hidden="true"></i> Back to Egg Claims</LinkTo></p>
 
 
 {{outlet}}  
